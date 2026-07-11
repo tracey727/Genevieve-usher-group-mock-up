@@ -1,0 +1,28 @@
+{
+  "required_present": true,
+  "node_returncode": 0,
+  "node_error": "",
+  "no_package_json": true,
+  "no_node_modules": true,
+  "hutchinson_mentions": [],
+  "files": [
+    "BUILD_VERIFICATION.json",
+    "DATABASE_DESCRIPTION_USHER_GROUP_CONSTRUCTION_DEMO.txt",
+    "DEPLOYMENT_INSTRUCTIONS.txt",
+    "README.md",
+    "USHER_GROUP_CONSTRUCTION_DEMO_DESCRIPTION.txt",
+    "_redirects",
+    "app.js",
+    "assets/genevieve-construction-icon.svg",
+    "index.html",
+    "manifest.webmanifest",
+    "netlify.toml",
+    "privacy.html",
+    "robots.txt",
+    "safety.html",
+    "styles.css",
+    "sw.js",
+    "terms.html",
+    "vercel.json"
+  ]
+}

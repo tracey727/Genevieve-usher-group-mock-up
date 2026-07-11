@@ -1,0 +1,15 @@
+{
+  "name": "GENEVIEVE Usher Group Construction Site Flow Demo",
+  "short_name": "Usher Demo",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fffdf8",
+  "theme_color": "#263238",
+  "icons": [
+    {
+      "src": "./assets/genevieve-construction-icon.svg",
+      "sizes": "128x128",
+      "type": "image/svg+xml"
+    }
+  ]
+}

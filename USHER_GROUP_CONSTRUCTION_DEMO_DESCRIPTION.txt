@@ -1,0 +1,38 @@
+GENEVIEVE App™ — Usher Group Construction Site Flow & Safety Support Assistant
+DEMO ONLY — fake data only
+
+Purpose:
+This demo has been built to show how GENEVIEVE App™ could support Usher Group-style construction, painting, waterproofing, supervisors, subcontractors and site managers.
+
+It is not designed to replace workplace health and safety systems, site supervisors, qualified trades, engineers, inspectors, certifiers, legal advisers or insurance advisers.
+
+It is designed to sit beside the work and make risks, missed checks, fatigue, defects, materials, handovers and sign-offs visible before they become bigger problems.
+
+What this first construction demo shows:
+- daily site check-in
+- worker break and fatigue check
+- site hazard board
+- weather and surface condition checks
+- painting module
+- waterproofing module
+- materials and stock alerts
+- defect photo log
+- rework risk alerts
+- supervisor sign-off
+- subcontractor handover
+- manager action board
+- evidence export
+- legal/safety wording boundaries
+
+The Genevieve colour system:
+GREEN — ready, checked, covered, stable
+AMBER — check soon, caution, support or review needed
+RED — do not proceed, action required, supervisor review needed
+BLACK / URGENT — immediate safety pathway or stop-work escalation
+
+This demo uses fake data only.
+Do not enter real site incidents, real worker information, confidential builder data or live client information until the system has had proper legal, WHS, privacy, insurance and business review.
+
+Created by Tracey Kennedy
+GENEVIEVE App™
+Created: 2026-07-11

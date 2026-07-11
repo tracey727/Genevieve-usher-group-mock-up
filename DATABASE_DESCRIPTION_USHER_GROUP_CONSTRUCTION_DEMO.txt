@@ -1,0 +1,45 @@
+DATABASE DESCRIPTION — USHER GROUP CONSTRUCTION DEMO
+
+The construction database is designed as a site-flow, safety-support and evidence-support layer.
+
+It does not replace legal WHS duties, qualified supervisors, site inspections, engineering sign-offs, certifiers, contracts or insurance requirements.
+
+Suggested database sections:
+
+1. Sites
+Site ID, site name, supervisor, project type, weather exposure, active trades, site status.
+
+2. Workers
+Worker ID, role, company, fatigue check, break status, task assignment, supervisor contact.
+
+3. Daily Site Checks
+Date, site open/closed, weather, access, hazards, PPE, exclusion zones, emergency access, supervisor sign-off.
+
+4. Hazards
+Hazard type, location, photo, severity, owner, action required, due time, closed time.
+
+5. Trade Modules
+Painting, waterproofing, plastering, flooring, electrical, plumbing, carpentry, roofing, concreting, demolition, tiling, cleaning and handover.
+
+6. Waterproofing Checks
+Substrate, falls, moisture, primer, membrane coat 1, membrane coat 2, curing, penetrations, flood test, photo proof, sign-off.
+
+7. Painting Checks
+Surface prep, sanding, cleaning, primer, coat count, drying time, weather, defects, colour/product used, final sign-off.
+
+8. Materials
+Item, quantity, minimum level, supplier, site location, expiry/shelf life, reorder alert.
+
+9. Defects / Rework
+Defect, trade, photo, severity, cause, cost impact, action, close-out evidence.
+
+10. Handovers
+From trade, to trade, checklist, conditions, photos, supervisor sign-off.
+
+11. Alerts
+Green/amber/red/urgent, reason, owner, action required, due time, closed time.
+
+12. Evidence Log
+Photos, checklists, timestamps, signatures, exports and audit trail.
+
+Real use would need WHS, legal, privacy, insurance, contract and industry review.

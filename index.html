@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#263238">
+<title>GENEVIEVE App™ — Usher Group Construction Site Flow Demo</title>
+<link rel="icon" href="./assets/genevieve-construction-icon.svg" type="image/svg+xml">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="app">
+<header class="topbar">
+  <div class="brand"><img src="./assets/genevieve-construction-icon.svg" alt=""><div><h1>GENEVIEVE App™ — Usher Group Construction Site Flow</h1><p>DEMO V1 • fake data only • painting, waterproofing & site support workflow</p></div></div>
+  <button class="demo-pill">DEMO ONLY</button>
+</header>
+
+<main>
+<section class="screen active" id="home">
+  <p class="kicker">Built to support Usher Group-style site flow, safety prompts, quality checks and evidence</p>
+  <section class="hero">
+    <div><h2>Make site pressure visible before it becomes rework, risk or injury</h2><p>This construction demo shows how Genevieve can help supervisors and trades see hazards, breaks, weather, material issues, defects, handovers and sign-offs in one calm board.</p></div>
+    <div class="orb amber"><b>DEMO</b><span>Fake site</span></div>
+  </section>
+
+  <section class="lights">
+    <div class="green"><b>Green</b><span>Ready / checked / stable</span></div>
+    <div class="amber"><b>Amber</b><span>Review / caution</span></div>
+    <div class="red"><b>Red</b><span>Do not proceed</span></div>
+    <div class="black"><b>Urgent</b><span>Stop / escalate</span></div>
+  </section>
+
+  <section class="card"><h3>Demo dashboard</h3><div class="stats"><div><b id="statSites">0</b><span>active sites</span></div><div><b id="statWorkers">0</b><span>workers</span></div><div><b id="statRed">0</b><span>red actions</span></div><div><b id="statStock">0</b><span>stock alerts</span></div></div></section>
+
+  <section class="card"><h3>Open construction demo</h3><div class="actions">
+    <button data-screen="site">Daily Site Flow</button>
+    <button data-screen="workers" class="secondary">Workers / Breaks</button>
+    <button data-screen="waterproofing" class="secondary">Waterproofing</button>
+    <button data-screen="painting" class="secondary">Painting</button>
+  </div></section>
+
+  <section class="card legal"><h3>Legal-safe demo boundary</h3><p>This is fake-data decision-support only. It does not certify WHS, building code, contract, insurance or quality compliance. Real use needs review by qualified construction, WHS, legal, privacy and insurance advisers.</p></section>
+</section>
+
+<section class="screen" id="site"><div class="title"><button data-screen="home">←</button><h2>Daily Site Flow</h2></div>
+<section class="card"><h3>Site status</h3><div id="siteList" class="list"></div></section>
+<section class="card"><h3>Daily site opening checklist</h3><div id="siteChecklist" class="checklist"></div></section></section>
+
+<section class="screen" id="workers"><div class="title"><button data-screen="home">←</button><h2>Workers, Breaks & Fatigue</h2></div>
+<section class="card"><h3>Worker support board</h3><div id="workerList" class="list"></div></section>
+<section class="card"><h3>Worker click-in</h3><label>Worker<select id="workerSelect"></select></label><div class="clickgrid"><button id="breakStart">☕ Break started</button><button id="breakFinish">✅ Break finished</button><button id="fatigue">⚠️ Fatigue / heat stress</button><button id="support">🆘 Support needed</button><button id="taskDone">🔨 Task complete</button></div><div id="workerLog" class="list"></div></section></section>
+
+<section class="screen" id="hazards"><div class="title"><button data-screen="home">←</button><h2>Hazards & Stop-Work Support</h2></div><section class="card"><h3>Hazard board</h3><div id="hazardList" class="list"></div></section></section>
+
+<section class="screen" id="waterproofing"><div class="title"><button data-screen="home">←</button><h2>Waterproofing Module</h2></div><section class="card"><h3>Stage checklist</h3><div id="waterproofChecklist" class="checklist"></div></section><section class="card"><h3>Current waterproofing alerts</h3><div id="waterproofAlerts" class="list"></div></section></section>
+
+<section class="screen" id="painting"><div class="title"><button data-screen="home">←</button><h2>Painting Module</h2></div><section class="card"><h3>Stage checklist</h3><div id="paintingChecklist" class="checklist"></div></section><section class="card"><h3>Current painting alerts</h3><div id="paintingAlerts" class="list"></div></section></section>
+
+<section class="screen" id="materials"><div class="title"><button data-screen="home">←</button><h2>Materials & Stock</h2></div><section class="card"><h3>Material alerts</h3><div id="materialList" class="list"></div></section></section>
+
+<section class="screen" id="defects"><div class="title"><button data-screen="home">←</button><h2>Defects & Rework Risk</h2></div><section class="card"><h3>Defect log</h3><div id="defectList" class="list"></div></section></section>
+
+<section class="screen" id="handover"><div class="title"><button data-screen="home">←</button><h2>Trade Handover</h2></div><section class="card"><h3>Handover checklist</h3><div id="handoverList" class="checklist"></div></section><section class="card"><h3>Open handovers</h3><div id="openHandovers" class="list"></div></section></section>
+
+<section class="screen" id="manager"><div class="title"><button data-screen="home">←</button><h2>Supervisor / Manager Action Board</h2></div><section class="card"><h3>Today’s actions</h3><div id="managerList" class="list"></div></section><section class="card"><h3>Genevieve learned patterns</h3><div id="learnedList" class="list"></div></section></section>
+
+<section class="screen" id="database"><div class="title"><button data-screen="home">←</button><h2>Database Description</h2></div><section class="card"><h3>What the database is for</h3><p>It is a construction site-flow, safety-support and evidence-support layer. It does not replace WHS duties, supervisors, inspections, certifiers, engineers, contracts or insurance requirements.</p><div id="dbSections"></div></section></section>
+
+<section class="screen" id="letter"><div class="title"><button data-screen="home">←</button><h2>Demo Description</h2></div><section class="card letter"><div id="letterText"></div><button id="downloadLetter" class="wide">Download description</button></section></section>
+
+<section class="screen" id="export"><div class="title"><button data-screen="home">←</button><h2>Export Evidence</h2></div><section class="card"><h3>Demo exports</h3><div class="actions"><button id="exportActions">Actions CSV</button><button id="exportWorkers" class="secondary">Workers CSV</button><button id="exportMaterials" class="secondary">Materials CSV</button><button id="exportLogs" class="secondary">Worker Logs CSV</button></div></section></section>
+</main>
+
+<nav class="bottom">
+<button class="active" data-screen="home">🏠<span>Home</span></button>
+<button data-screen="site">🏗️<span>Site</span></button>
+<button data-screen="workers">👷<span>Workers</span></button>
+<button data-screen="hazards">⚠️<span>Hazards</span></button>
+<button data-screen="waterproofing">💧<span>Water</span></button>
+<button data-screen="painting">🎨<span>Paint</span></button>
+<button data-screen="materials">📦<span>Stock</span></button>
+<button data-screen="defects">🔧<span>Defects</span></button>
+<button data-screen="handover">🔁<span>Handover</span></button>
+<button data-screen="manager">🚦<span>Actions</span></button>
+<button data-screen="database">🗄️<span>Data</span></button>
+<button data-screen="letter">📄<span>About</span></button>
+<button data-screen="export">⬇️<span>Export</span></button>
+</nav>
+</div>
+<script src="./app.js"></script>
+</body>
+</html>
