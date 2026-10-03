@@ -20,11 +20,14 @@ WHAT IT INCLUDES:
 DEPLOYMENT:
 Static app. No npm. No Vite. No package.json. No node_modules.
 
-VERCEL:
-Framework Preset: Other
-Root Directory: ./
-Install Command: blank
-Build Command: blank
-Output Directory: blank or .
+CLOUDFLARE PAGES:
+- Connect this GitHub repository to Cloudflare Pages.
+- Framework preset: none / static HTML.
+- Build command: leave blank.
+- Output directory: repository root.
+- Keep the root `_redirects` file; Cloudflare Pages uses it for the SPA fallback.
+
+Platform direction: GitHub + Cloudflare. Neon is not required for this fake-data static demo.
 
 Created: 2026-07-11
+Repository deployment cleanup: 2026-10-03
