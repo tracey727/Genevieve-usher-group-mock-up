@@ -16,13 +16,15 @@
     "assets/genevieve-construction-icon.svg",
     "index.html",
     "manifest.webmanifest",
-    "netlify.toml",
     "privacy.html",
     "robots.txt",
     "safety.html",
     "styles.css",
     "sw.js",
     "terms.html",
-    "vercel.json"
-  ]
+    ".github/workflows/ci.yml"
+  ],
+  "platform": "GitHub + Cloudflare Pages",
+  "vercel_removed": true,
+  "netlify_removed": true
 }
