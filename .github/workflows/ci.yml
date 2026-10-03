@@ -1,0 +1,20 @@
+name: Usher Demo CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: test -s index.html
+      - run: test -s app.js
+      - run: test -s styles.css
+      - run: test -s manifest.webmanifest
+      - run: test -s _redirects
+      - run: test ! -e vercel.json
+      - run: test ! -e netlify.toml
+      - run: node --check app.js
