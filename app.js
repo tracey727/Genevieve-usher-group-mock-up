@@ -18,7 +18,14 @@ function load(){try{Object.assign(state,JSON.parse(localStorage.getItem(KEY)||"{
 function save(){localStorage.setItem(KEY,JSON.stringify(state))}
 function go(id){$$(".screen").forEach(s=>s.classList.remove("active"));$("#"+id).classList.add("active");$$(".bottom button").forEach(b=>b.classList.toggle("active",b.dataset.screen===id));render();scrollTo({top:0,behavior:"smooth"})}
 function tag(s){return `<span class="tag ${s}">${String(s).toUpperCase()}</span>`}
-function item(o){return `<article class="item ${o.status}"><h4>${o.title||o.name||o.item||o.from+" → "+o.to}</h4>${tag(o.status)}<p>${o.reason||o.action||""}</p>${o.area?`<p><b>Area:</b> ${o.area}</p>`:""}${o.trade?`<p><b>Trade:</b> ${o.trade} • <b>Risk:</b> ${o.cost}</p>`:""}</article>`}
+function actionControl(o={}){
+  if(!["red","amber"].includes(o.status)) return {ok:true,status:o.status};
+  const owner=o.owner||o.ownerTeam||o.supervisor;
+  const due=o.due||o.dueTime;
+  if(!owner||!due) return {ok:false,status:"hold",reason:"Accountable owner and due time required before this action is controlled."};
+  return {ok:true,status:o.status,owner,due};
+}
+function item(o){let ctl=actionControl(o),display=ctl.ok?o.status:"hold";return `<article class="item ${display}"><h4>${o.title||o.name||o.item||o.from+" → "+o.to}</h4>${tag(display)}<p>${ctl.ok?(o.reason||o.action||""):ctl.reason}</p>${o.area?`<p><b>Area:</b> ${o.area}</p>`:""}${o.trade?`<p><b>Trade:</b> ${o.trade} • <b>Risk:</b> ${o.cost}</p>`:""}${ctl.owner?`<p><b>Owner:</b> ${ctl.owner} • <b>Due:</b> ${ctl.due}</p>`:""}</article>`}
 function render(){renderHome();renderSites();renderWorkers();renderHazards();renderChecklists();renderMaterials();renderDefects();renderHandovers();renderManager();renderDB();$("#letterText")&&($("#letterText").textContent=letterText)}
 function renderHome(){let reds=[...sites,...workers,...hazards,...materials,...defects,...handovers].filter(x=>x.status==="red").length;$("#statSites").textContent=sites.length;$("#statWorkers").textContent=workers.length;$("#statRed").textContent=reds;$("#statStock").textContent=materials.filter(m=>m.status!=="green").length}
 function renderSites(){if(!$("#siteList"))return;$("#siteList").innerHTML=sites.map(item).join("")}
